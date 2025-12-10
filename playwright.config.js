@@ -42,6 +42,7 @@ export default defineConfig({
     headless : false,
     video : 'retain-on-failure',
     trace : 'retain-on-failure',
+    worker : 4, 
     viewport : {width:750, height:750}
 
     },

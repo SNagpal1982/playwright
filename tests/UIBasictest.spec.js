@@ -6,7 +6,6 @@ const { constants } = require('http2');
 test("Practice for child window.", async ({browser})=>{
     const context = await browser.newContext();
     const page = await context.newPage();
-    await page.pause();
     await page.route("**/*.css", route=>route.abort());
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
 
@@ -23,7 +22,6 @@ test("Practice for child window.", async ({browser})=>{
     const arrayText = text.split("@")[1];
     const domainName = arrayText.split(" ")[0];
     console.log("Domain Name from Child Window : " + domainName);
-    //await page.pause();
     await page.locator("#username").fill(domainName);
     const newText = await page.locator("#username").inputValue();
     console.log("Email in Parent Window : " + newText);
@@ -51,7 +49,6 @@ test.only ("Practical to get all product name", async ({browser})=>{
 
     const context = await browser.newContext();
     const page = await context.newPage();
-    await page.pause();
     await page.goto("https://rahulshettyacademy.com/client/#/auth/register");
     await page.locator("#firstName").fill("Sandeep");
     await page.locator("#lastName").fill("Nagpal");
