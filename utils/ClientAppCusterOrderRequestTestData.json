@@ -1,0 +1,15 @@
+{
+    "CusterOrderRequestTestData": {
+        "productName": "iphone 13 pro",
+        "ccNumber": "4542 9931 9292 9999",
+        "ccExpiryMonth": "12",
+        "ccExpiryYear": "36",
+        "ccv": "123",
+        "ccName": "Sandeep Nagpal",
+        "coupon": "festival discount",
+        "email": "sandeepnagpal2@gmail.com",
+        "countryCode": "ind",
+        "countryName": "India",
+        "orderConfirmationText": " Thankyou for the order. "
+    }
+}
