@@ -45,7 +45,7 @@ test("Practice for Radio and Dropdown Button.", async ({page})=>{
 
 });
 
-test.only ("Practical to get all product name", async ({browser})=>{
+test ("Practical to get all product name", async ({browser})=>{
 
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -101,8 +101,8 @@ test('Browser context Playwright test', async ({browser})=>
 
 test('Page Playwright test', async ({page})=>
     {
-        await page.goto("https://google.com/");
-        await expect(page).toHaveTitle("Google");
+        await page.goto("https://rahulshettyacademy.com/client/#/dashboard/dash/");
+        await expect(page).toHaveTitle("Let's Shop");
     }
 );
 

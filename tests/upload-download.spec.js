@@ -64,7 +64,6 @@ test ("Download-upload Excel Validation.", async({page})=>{
     const searchText = "Mango";
     const updatedValue = "350";
     await page.goto("https://rahulshettyacademy.com/upload-download-test/index.html");
-    await page.pause();
     const downloadEventPromise = page.waitForEvent("download");
     await page.getByRole("button", {name: 'Download'}).click();
     await downloadEventPromise;

@@ -51,7 +51,7 @@ test("Screenshot and Visual Comparision", async ({ page }) => {
     await page.screenshot({path: "SS_Hidden.png"})
 });
 
-test.only("Visual Comparision", async ({ page }) => {
+test("Visual Comparision", async ({ page }) => {
 
     await page.goto("https://playwright.dev/docs/api/class-playwright");
     await page.waitForLoadState();
