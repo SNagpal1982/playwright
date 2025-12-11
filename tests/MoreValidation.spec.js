@@ -1,5 +1,6 @@
 const { test, expect } = require("@playwright/test");
 
+test.describe.configure({mode : "parallel"})
 test("More Validation", async ({ page }) => {
 
     await page.goto("https://rahulshettyacademy.com/AutomationPractice");
