@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "regression" : "npx playwright test",
-    "WebTest" : "npx playwright test --grep '@Web'",
-    "APITest" : "npx playwright test --grep @API"
+    "regression": "npx playwright test",
+    "WebTest": "npx playwright test --grep '@Web'",
+    "APITest": "npx playwright test --grep @API"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "@playwright/test": "^1.56.1",
     "@types/node": "^24.10.1",
     "allure-playwright": "^3.4.3",
-    "exceljs": "^4.4.0"
+    "exceljs": "^4.4.0",
+    "typescript": "^5.9.3"
   }
 }
