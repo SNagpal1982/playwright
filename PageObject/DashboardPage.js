@@ -1,16 +1,16 @@
 class DashboardPage {
     constructor(page) {
         this.page = page;
-        this.productList = page.locator(".card-body");
-        this.productName = page.locator(".card-body b");
-        this.productPrice = page.locator(".text-muted");
-        this.viewBtn = page.locator("text= View");
-        this.addToCartBtn = page.locator("text= Add To Cart");
-        this.cartDashboard = page.locator("[routerlink='/dashboard/cart']");
+        this.productList = this.page.locator(".card-body");
+        this.productName = this.page.locator(".card-body b");
+        this.productPrice = this.page.locator(".text-muted");
+        this.viewBtn = this.page.locator("text= View");
+        this.addToCartBtn = this.page.locator("text= Add To Cart");
+
     }
 
     async addProductToCart(productName) {
-        this.productList.first().waitFor();
+        // await this.productList.first().waitFor();
         const title = await this.productName.allTextContents();
         console.log(title);
 
@@ -24,11 +24,8 @@ class DashboardPage {
                 break;
             }
         }
-        await this.goToCart();
     }
-    async goToCart() {
-        await this.cartDashboard.click();
-    }
+
 }
 
 module.exports = { DashboardPage };

@@ -17,7 +17,7 @@ const { CustomerOrderRequestTestData } = require("../utils/ClientAppCustomerOrde
         await myCartPage.checkOutProduct(CustomerOrderRequestTestData.productName);
 
         const placeOrderPage = poManager.getPlaceOrderPage();
-        const orderId = await placeOrderPage.placeOrder(CustomerOrderRequestTestData);
+        const orderId = await placeOrderPage.placeOrder(CustomerOrderRequestTestData.countryCode, CustomerOrderRequestTestData.countryName);
         console.log("Order has been placed succesfully with Order Id :" + orderId);
 
         //search oder in Order History Page

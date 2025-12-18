@@ -15,11 +15,11 @@ class PlaceOrderPage {
         this.dropdown = this.page.locator(".ta-results");
     }
 
-    async placeOrder(placeOrderDetails) {
-        await this.searchCountryAndSelect(placeOrderDetails.countryCode, placeOrderDetails.countryName);
-        await this.getValidateData(placeOrderDetails.email);
+    async placeOrder(email, countryCode, countryName, orderConfirmationText) {
+        await this.searchCountryAndSelect(countryCode, countryName);
+        await this.getValidateData(email);
         await this.submitBtn.click();
-        await expect(this.orderConfirmation).toHaveText(placeOrderDetails.orderConfirmationText);
+        await expect(this.orderConfirmation).toHaveText(orderConfirmationText);
         return (await this.orderId.textContent());
     }
 
